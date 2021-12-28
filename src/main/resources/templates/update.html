@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <div class="top-header">
+    <h1 class="main-header">Обновление данных из УКМ в BI</h1>
+  </div>
+  <div>
+    <form method="post">
+      <b>Обновить данные</b>
+      <button type="submit" name="btn_update">Обновить данные</button>
+    </form>
+    <div>
+      <table border="1">
+        <tr>
+          <th>store id</th>
+          <th>name</th>
+          <th>id</th>
+          <th>deleted</th>
+        </tr>
+        <tr th:each = "user : ${trmInUsersList}">
+          <td th:utext = "${user.storeId}"></td>
+          <td th:utext = "${user.name}"></td>
+          <td th:utext = "${user.id}"></td>
+          <td th:utext = "${user.deleted}"></td>
+        </tr>
+
+      </table>
+
+
+
+    </div>
+    <div></div>
+    <div></div>
+  </div>
+
+
+</body>
+</html>
